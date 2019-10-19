@@ -1,0 +1,100 @@
+﻿@using System.Web.Optimization  
+@{
+
+    ViewBag.Title = "Upload";
+    Layout = null;
+}
+
+
+<html>
+<head>
+    <title>Upload Your Aid</title>
+    <title>Upload Your Aid</title>
+    "
+    <link href="@Url.Content("~/Content/css/Upload.css")" rel="stylesheet" type="text/css" />"
+    <link rel="stylesheet" type="text/css" href="~/Content/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/component.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="shadow">
+            <h1>Make Your Own Aid <span> Fastest And Efficient Way To Sold Your Book</span></h1>
+        </header>
+    </div>
+    @using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+<form>
+    <div class="table">
+        <div class="table-cell">
+            <div class="modal">
+                <div id="profile">
+                    <div class="dashes"></div>
+                    <label>Click to browse or drag an image here</label>
+                </div>
+                <div class="stat">
+                    <div class="label">Price</div>
+                    <div class="num">
+                        <div class="input_field">
+                            <input type="text" id="Price" name="Price" style="width: 100px;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="label">Title</div>
+                    <div class="num">
+                        <div class="input_field">
+                            <input type="text" id="Title" name="Title" style="width: 100px;" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="label">Author</div>
+                    <div class="num">
+                        <div class="input_field">
+                            <input type="text" id="Author" name="Author" style="width: 100px;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="label">Department</div>
+                    <div class="num">
+                        <div class="input_field">
+                            <input type="text" id="Department" name="Department" style="width: 100px;" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="label">Discription</div>
+                    <div class="num">
+                        <div class="input_field">
+                            <textarea id="Discription" name="Discription"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top : 5px">
+                    <button>Done Editing</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</form>
+    }
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+    <script src="~/Scripts/Upload.js"></script>
+
+</body>
+</html>
